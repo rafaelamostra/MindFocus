@@ -1,0 +1,2 @@
+# MindFocus
+mindfocus amostra
