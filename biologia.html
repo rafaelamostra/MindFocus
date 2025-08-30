@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologia - EstudaFácil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a8e063, #56ab2f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .study-button {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .study-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .study-button img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .study-button span {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #fff;
+      color: #333;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Biologia - Escolha a forma de estudo</h1>
+
+  <div class="button-container">
+    <div class="study-button" onclick="abrir('resumo')">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135670.png" alt="Resumo">
+      <span>Resumo</span>
+    </div>
+
+    <div class="study-button" onclick="abrir('video')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Vídeo Aula">
+      <span>Vídeo Aula</span>
+    </div>
+
+    <div class="study-button" onclick="abrir('mapa')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Mapas Mentais">
+      <span>Mapas Mentais</span>
+    </div>
+
+    <div class="study-button" onclick="abrir('organograma')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Organogramas">
+      <span>Organogramas</span>
+    </div>
+
+    <div class="study-button" onclick="abrir('historinha')">
+      <img src="https://cdn-icons-png.flaticon.com/512/2762/2762455.png" alt="Historinhas">
+      <span>Historinhas</span>
+    </div>
+  </div>
+
+  <button class="back-btn" onclick="voltar()">⬅ Voltar</button>
+
+  <script>
+    function abrir(tipo) {
+      alert("Abrindo " + tipo + " de Biologia...");
+      // No futuro pode direcionar para páginas específicas
+      // window.location.href = "biologia_" + tipo + ".html";
+    }
+
+    function voltar() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

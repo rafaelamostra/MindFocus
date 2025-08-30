@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Vídeo Aula de História</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    iframe {
+      width: 560px;
+      height: 315px;
+      border-radius: 10px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vídeo Aula de História</h1>
+  <p>Assista abaixo algumas vídeo aulas selecionadas:</p>
+
+  <div class="video-container">
+    <!-- Vídeo 1 -->
+    <iframe src="https://www.youtube.com/embed/6P89N-WrnLk" 
+            title="Vídeo Aula 1" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+
+    <!-- Vídeo 2 -->
+    <iframe src="https://www.youtube.com/embed/EEOYAN2CWwM" 
+            title="Vídeo Aula 2" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+
+    <!-- Vídeo 3 -->
+    <iframe src="https://www.youtube.com/embed/9UWhEjeQs40" 
+            title="Vídeo Aula 3" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <button onclick="window.location.href='historia.html'">⬅ Voltar</button>
+</body>
+</html>
+

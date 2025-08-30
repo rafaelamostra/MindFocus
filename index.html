@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EstudaFácil - Início</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .btn-voltar {
+      display: block;
+      margin: 0 auto 40px auto;
+      padding: 10px 20px;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-voltar:hover {
+      background-color: #e55050;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .disciplina {
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .disciplina:hover {
+      transform: translateY(-5px);
+    }
+
+    .disciplina img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .disciplina span {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo(a), <span id="nomeUsuario">Usuário</span>!</h1>
+  <h2>Escolha uma disciplina para começar a estudar:</h2>
+
+  <!-- Botão de Voltar -->
+  <button class="btn-voltar" onclick="voltarLogin()">⬅ Voltar para Login</button>
+
+  <div class="grade">
+    <div class="disciplina" onclick="abrirDisciplina('matematica.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/2907/2907253.png" alt="Matemática">
+      <span>Matemática</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('portugues.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Português">
+      <span>Português</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('fisica.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712054.png" alt="Física">
+      <span>Física</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('quimica.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087920.png" alt="Química">
+      <span>Química</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('biologia.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/2769/2769600.png" alt="Biologia">
+      <span>Biologia</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('historia.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1825/1825373.png" alt="História">
+      <span>História</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('geografia.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Geografia">
+      <span>Geografia</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('ingles.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" alt="Inglês">
+      <span>Inglês</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('filosofia.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1043/1043497.png" alt="Filosofia">
+      <span>Filosofia</span>
+    </div>
+
+    <div class="disciplina" onclick="abrirDisciplina('sociologia.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1042/1042338.png" alt="Sociologia">
+      <span>Sociologia</span>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 EstudaFácil</footer>
+
+  <script>
+    // Pega o nome do usuário do localStorage
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    if (usuarios.length > 0) {
+      const ultimoUsuario = usuarios[usuarios.length - 1];
+      document.getElementById('nomeUsuario').innerText = ultimoUsuario.usuario;
+    }
+
+    function abrirDisciplina(pagina) {
+      window.location.href = pagina;
+    }
+
+    function voltarLogin() {
+      window.location.href = "login.html"; // ou "inicial.html", depende do nome do seu login
+    }
+  </script>
+</body>
+</html>
